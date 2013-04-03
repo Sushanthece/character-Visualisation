@@ -1,0 +1,246 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+* {
+	padding:0; 
+	margin:0;
+}
+   
+html,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+   
+body {
+	padding-left:1px;
+}
+
+rect {
+	
+}
+
+rect:hover {
+	pointer-events:all;
+	transition-property:fill;
+    transition-duration:1s;
+    transition-delay:1s;
+	opacity:0.5;
+}
+
+.label {
+	box-sizing:border-box;
+	float:left;
+	margin-right:1px;
+	padding-top:4px;
+	font-family:arial;
+	text-align:center;
+	color:#fff;
+	background-color:  #6D7B8D;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#source {
+	box-sizing:border-box;
+	width:85%;
+	height:460px;
+	margin-left:10px;
+	margin-bottom:15px;
+}
+
+#data-box {
+	position:absolute;
+	font-family:arial;
+	width:60px;
+	height:30px;
+	padding:2px;
+	box-sizing:border-box;
+	border:1px solid #555;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 15px;
+	background-color:  #D9D9D9;
+	text-align:center;
+	visibility:hidden;
+}
+
+#change-to-alphabetic,
+#change-to-ascending,
+#change-to-descending {
+	width:40px;
+	height:25px;
+	top:510px;
+	position:absolute;
+	border:1px solid #333;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	cursor:pointer;
+	font-family:arial;
+}
+
+#change-to-alphabetic:hover,
+#change-to-ascending:hover,
+#change-to-descending:hover {
+	opacity:0.5;
+	border-color:#aaa;
+	border-bottom:1px solid #555;
+}
+
+#change-to-alphabetic {
+	left:20px;
+	width:60px;    
+	border-radius: 15px;
+}
+
+#change-to-ascending {
+	left:140px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+#change-to-descending {
+	left:100px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+    }
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
