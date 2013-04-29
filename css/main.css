@@ -131,7 +131,7 @@ rect:hover {
 #source {
 	box-sizing:border-box;
 	width:85%;
-	height:480px;
+	height:440px;
 	margin-left:10px;
 	margin-bottom:15px;
 }
@@ -157,7 +157,7 @@ rect:hover {
 #change-to-descending {
 	width:40px;
 	height:25px;
-	top:530px;
+	top:490px;
 	position:absolute;
 	border:1px solid #333;
 	-webkit-border-radius: 2px;

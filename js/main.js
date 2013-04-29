@@ -90,7 +90,7 @@ $(document).ready(function () {
                 
                 // Introducing and defining all variables here
                 var svgWidth = ($("body").width() - 1)*.75,
-                    svgHeight = 460,
+                    svgHeight = 420,
                     barPadding = 1,
                     data = this.data,
                     minFrequency = this.minFrequency,
@@ -322,11 +322,11 @@ $(document).ready(function () {
     $("rect").live("mouseover", function (event) {
         
         if (($("body").width() - 100 - event.pageX) < 0) {
-            var top = (event.pageY - 20) + "px",
-                left = (event.pageX - 110) + "px";
+            var top = (420) + "px",
+                left = (event.pageX-40) + "px";
         } else {
-            var top = (event.pageY - 20) + "px",
-                left = (event.pageX + 20) + "px";
+            var top = (420) + "px",
+                left = (event.pageX-40) + "px";
         }
         
         $("#data-box").text( $(this).attr("data-letter") + " = " + $(this).attr("data-frequency") )
@@ -338,11 +338,11 @@ $(document).ready(function () {
         
     }).live("mousemove", function () {
         if (($("body").width() - 100 - event.pageX) < 0) {
-            var top = (event.pageY - 20) + "px",
-                left = (event.pageX - 110) + "px";
+            var top = (420) + "px",
+                left = (event.pageX-40) + "px";
         } else {
-            var top = (event.pageY - 20) + "px",
-                left = (event.pageX + 20) + "px";
+            var top = (420) + "px",
+                left = (event.pageX-40) + "px";
         }
         
         $("#data-box").css("top", top)
