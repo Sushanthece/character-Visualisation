@@ -90,7 +90,7 @@ $(document).ready(function () {
                 
                 // Introducing and defining all variables here
                 var svgWidth = ($("body").width() - 1)*.75,
-                    svgHeight = 420,
+                    svgHeight = 500,
                     barPadding = 1,
                     data = this.data,
                     minFrequency = this.minFrequency,
@@ -138,14 +138,14 @@ $(document).ready(function () {
                   .each("end", function () {
                         d3.select(this)
                           .transition()
-                          .duration(50)
+                          .duration(500)
                           .attr("height", function (d) {
                                 return scale(maxFrequency);
                           })
                           .each("end", function () {
                                 d3.select(this)
                                   .transition()
-                                  .delay(250)
+                                  .delay(750)
                                   .attr("y", function (d) {
                                     return svgHeight - scale(d.frequency);
                                   })
@@ -322,11 +322,11 @@ $(document).ready(function () {
     $("rect").live("mouseover", function (event) {
         
         if (($("body").width() - 100 - event.pageX) < 0) {
-            var top = (420) + "px",
-                left = (event.pageX-40) + "px";
+            var top = (event.pageY - 20) + "px",
+                left = (event.pageX - 110) + "px";
         } else {
-            var top = (420) + "px",
-                left = (event.pageX-40) + "px";
+            var top = (event.pageY - 20) + "px",
+                left = (event.pageX + 20) + "px";
         }
         
         $("#data-box").text( $(this).attr("data-letter") + " = " + $(this).attr("data-frequency") )
@@ -338,11 +338,11 @@ $(document).ready(function () {
         
     }).live("mousemove", function () {
         if (($("body").width() - 100 - event.pageX) < 0) {
-            var top = (420) + "px",
-                left = (event.pageX-40) + "px";
+            var top = (event.pageY - 20) + "px",
+                left = (event.pageX - 110) + "px";
         } else {
-            var top = (420) + "px",
-                left = (event.pageX-40) + "px";
+            var top = (event.pageY - 20) + "px",
+                left = (event.pageX + 20) + "px";
         }
         
         $("#data-box").css("top", top)
