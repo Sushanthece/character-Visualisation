@@ -90,7 +90,7 @@ $(document).ready(function () {
                 
                 // Introducing and defining all variables here
                 var svgWidth = ($("body").width() - 1)*.75,
-                    svgHeight = 500,
+                    svgHeight = 400,
                     barPadding = 1,
                     data = this.data,
                     minFrequency = this.minFrequency,
@@ -138,14 +138,14 @@ $(document).ready(function () {
                   .each("end", function () {
                         d3.select(this)
                           .transition()
-                          .duration(500)
+                          .duration(50)
                           .attr("height", function (d) {
                                 return scale(maxFrequency);
                           })
                           .each("end", function () {
                                 d3.select(this)
                                   .transition()
-                                  .delay(750)
+                                  .delay(250)
                                   .attr("y", function (d) {
                                     return svgHeight - scale(d.frequency);
                                   })
@@ -161,7 +161,7 @@ $(document).ready(function () {
                               .text(function (d) {
                                     return d.letter;
                               })
-                              .style("height", 30  + "px")
+                              .style("height",30  + "px")
                               .style("width", function () {
                                     return svgWidth / data.length - barPadding + "px";
                               });
@@ -173,8 +173,8 @@ $(document).ready(function () {
             updateBarGraph: function (sortorder) {
                 
                 // Definitions
-                var svgWidth = $("body").width() - 1,
-                    svgHeight = 500,
+                var svgWidth = ($("body").width() - 1)*.75,
+                    svgHeight = 400,
                     barPadding = 1,
                     data = this.data,
                     minFrequency = this.minFrequency,
@@ -217,7 +217,7 @@ $(document).ready(function () {
                         return "rgb(75, 180, "+ (Math.floor(255 - (255 * normalizedFrequency))) +")";
                    })
                    .transition()
-                   .delay(500)
+                   .delay(250)
                    .attr("y", function (d) {
                         return svgHeight - scale(d.frequency);
                    });
@@ -321,13 +321,8 @@ $(document).ready(function () {
     
     $("rect").live("mouseover", function (event) {
         
-        if (($("body").width() - 100 - event.pageX) < 0) {
-            var top = (event.pageY - 20) + "px",
-                left = (event.pageX - 110) + "px";
-        } else {
-            var top = (event.pageY - 20) + "px",
-                left = (event.pageX + 20) + "px";
-        }
+            var top = "420 px",
+                left = (event.pageX-100) + "px";
         
         $("#data-box").text( $(this).attr("data-letter") + " = " + $(this).attr("data-frequency") )
                       .css( "visibility", "visible" )
@@ -337,13 +332,8 @@ $(document).ready(function () {
         $(this).css("border", "1px solid #333");
         
     }).live("mousemove", function () {
-        if (($("body").width() - 100 - event.pageX) < 0) {
-            var top = (event.pageY - 20) + "px",
-                left = (event.pageX - 110) + "px";
-        } else {
-            var top = (event.pageY - 20) + "px",
-                left = (event.pageX + 20) + "px";
-        }
+            var top = "420px",
+                left = (event.pageX-100) + "px";
         
         $("#data-box").css("top", top)
                       .css("left", left);
